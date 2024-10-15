@@ -1,0 +1,23 @@
+
+
+#include<iostream>
+using namespace std;
+int findMax(int *arr, int n)
+{
+    int max=*arr;
+    for(int i=1;i<n;i++)
+    {
+        if(*(arr+i)>max)
+        {
+            max=*(arr+i);
+        }
+    }
+   
+    return max;
+}
+int main()
+{
+    int a[]={1,2,3,4,5};
+    int n=sizeof(a)/sizeof(a[0]);
+    cout<<findMax(a,n)<<endl;
+}
