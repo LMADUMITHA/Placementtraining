@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int findAvg(int *arr, int n)
+{
+    int sum=*arr;
+    for(int i=1;i<n;i++)
+    {
+        sum=sum+(*(arr+i));
+    }
+    int k=sum/n;
+    return k;
+}
+int main()
+{
+    int a[]={1,2,3,4,5};
+    int n=sizeof(a)/sizeof(a[0]);
+    cout<<findAvg(a,n)<<endl;
+}
