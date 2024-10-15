@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+void reverseStr(char *a)
+{
+    char *end=a;
+    while(*end)
+    {
+     end++;  
+    }
+    end--;
+    while(a<end)
+    {
+        char temp=*a;
+        *a=*end;
+        *end=temp;
+        a++;
+        end--;
+    }
+}
+int main()
+{
+    char a[]="hello";
+    reverseStr(a);
+    cout<<a<<endl;
+    return 0;
+}
